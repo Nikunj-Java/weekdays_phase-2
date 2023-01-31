@@ -10,9 +10,25 @@
   	<servlet-class>com.simplilearn.demo.MyServlet</servlet-class>
   </servlet>
   
+  
+  
   <servlet-mapping>
   	<servlet-name>first</servlet-name>
   	<url-pattern>/generic</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  <!-- Servlet Classes and interface -->
+  <servlet>
+  	<servlet-name>second</servlet-name>
+  	<servlet-class>com.simplilearn.demo.TestServlet</servlet-class>
+  </servlet>
+  
+  
+  <servlet-mapping>
+  	<servlet-name>second</servlet-name>
+  	<url-pattern>/test</url-pattern>
   </servlet-mapping>
   
   

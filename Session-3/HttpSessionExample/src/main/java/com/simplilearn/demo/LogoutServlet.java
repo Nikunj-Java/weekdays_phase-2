@@ -10,31 +10,24 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-@WebServlet("/dashboard")
-public class DashboradServlet extends HttpServlet {
+@WebServlet("/logout")
+public class LogoutServlet extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		PrintWriter out=resp.getWriter();
-		
-		resp.setContentType("text/html");
-		
-		HttpSession session=req.getSession(false);
-		
-		if(session!=null) {
-			String USERNAME=(String) session.getAttribute("key");
-			
-			if(USERNAME!=null) {
-				out.print("User Exist: "+ USERNAME);
-				out.print("<br><a href='logout'>Logout</a>");
-			}
-			
-		}
-		else
-		{
-			out.print("Kindly Login First");
-		}
+		 PrintWriter out=resp.getWriter();
+		 
+		 HttpSession session=req.getSession(false);
+		 
+		 if(session!=null) {
+			 session.invalidate();
+			 out.print("User Logged out  Successfully");
+			 //resp.sendRedirect("index.html");
+		 }
+		 else {
+			 out.print("Kindly Login First");
+		 }
 	}
 
 	@Override

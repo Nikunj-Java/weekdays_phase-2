@@ -1,0 +1,51 @@
+1. Create Database
+---------------------
+
+> create database ecommerce4
+
+2. Use Database
+---------------------
+> use ecommerce4
+
+
+3. create table:
+---------------------
+> create table product(id bigint primary key auto_increment,name varchar(100),price decimal(10,2), date_added timestamp default now());
+
+4. verify the table is prepared or not?
+----------------------------------------
+> describe product;
+
+5. Let's Insert Some Records in the table
+----------------------------------------------
+
+> insert into product (name,price) value ('HP  Laptop',12000);
+> insert into product (name,price) value ('LENOVO Laptop',45000);
+> insert into product (name,price) value ('ACER Laptop',67000);
+> insert into product (name,price) value ('DELL Laptop',45000);
+
+
+6. Let's Retrive Data
+-----------------------
+
+> select * from product;
+
+
+7. Let's Add some filter
+-------------------------
+> select * from product where id=2;
+
+8. UPDATE
+-------------------------
+
+> update product set name="XYZ 123" where id=3;
+
+9. DELETE
+-------------------------------
+
+> delete from product where id=3;
+
+10. DROP
+--------------------------------
+if you want to remove table
+> drop table product;

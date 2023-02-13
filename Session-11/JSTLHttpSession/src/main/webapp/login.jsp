@@ -12,8 +12,8 @@
 <body>
 
 
-<c:set var="name" value="${param.name }"></c:set>
-<c:set var="pass" value="${param.pass }"></c:set>
+<c:set var="name" value="${param.name }" scope="session"></c:set>
+<c:set var="pass" value="${param.pass }" scope="session"></c:set>
 <c:set var="mypass" value="admin@123"></c:set>
 
 <!-- If and Else -->
